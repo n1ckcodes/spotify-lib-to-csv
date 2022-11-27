@@ -1,5 +1,5 @@
 {
-  "name": "spotifyhx",
+  "name": "spotify-lib-to-csv",
   "version": "0.1.0",
   "description": "Tracks songs saved to users spotify library and records changes over time ",
   "main": "index.js",

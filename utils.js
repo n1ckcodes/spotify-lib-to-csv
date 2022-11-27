@@ -8,6 +8,7 @@ exports.getUserSpotifyLib = async () => {
   let url = `https://api.spotify.com/v1/me/tracks?market=US&limit=50`;
   //retry counter
   let errorCount = 0;
+  console.log(`Loading users spotify library...`)
   do {
     //these calls might work async but I'm not sure what the rate limit is on spotify lib and didn't check
     await axios
@@ -22,11 +23,12 @@ exports.getUserSpotifyLib = async () => {
         if (res.data.items.length > 0) {
           data.push(...res.data.items);
         }
+        console.log(`Song count: ${data.length}`)
       })
       .catch((e) => {
         if (e.response) {
           errorCount += 1;
-          console.log(e.response);
+          console.log(e.response.data);
         } else {
           errorCount += 1;
           console.log(e);
