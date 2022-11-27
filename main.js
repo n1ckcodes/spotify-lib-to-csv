@@ -11,11 +11,21 @@ const { getUserSpotifyLib } = require("./utils");
       name: song.track.name,
       //Have only seen 1 artist in this array so far but should look into what multiple artists...
       artist: song.track.artists[0].name,
-      "added at": song.added_at
+      "added at": song.added_at,
     };
     songLib.push(songObj);
   }
 
+  //Write JSON file
+  fs.writeFile(
+    `./data/songs-${Date.now()}.json`,
+    JSON.stringify(songLib),
+    (err) => {
+      if (err) console.log(err);
+    }
+  );
+
+  //Write CSV file
   converter.json2csv(songLib, (err, csv) => {
     if (err) {
       throw err;

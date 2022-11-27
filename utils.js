@@ -1,7 +1,5 @@
 const axios = require("axios");
-/**
 
- */
 exports.getUserSpotifyLib = async () => {
   const data = [];
   //50 items is max that can be queried at a time
@@ -39,4 +37,3 @@ exports.getUserSpotifyLib = async () => {
   return data;
 };
 
-exports.compareFiles = async () => {};
