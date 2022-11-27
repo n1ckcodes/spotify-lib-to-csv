@@ -1,0 +1,24 @@
+{
+  "name": "spotifyhx",
+  "version": "0.1.0",
+  "description": "Tracks songs saved to users spotify library and records changes over time ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n1ckcodes/SpotifyHX.git"
+  },
+  "author": "Nicholas Wasik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n1ckcodes/SpotifyHX/issues"
+  },
+  "homepage": "https://github.com/n1ckcodes/SpotifyHX#readme",
+  "dependencies": {
+    "axios": "^1.2.0",
+    "dotenv": "^16.0.3",
+    "json-2-csv": "^3.18.0"
+  }
+}
