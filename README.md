@@ -1,5 +1,5 @@
 # SpotifyHX
-Tracks songs saved to users spotify library and records changes over time
+Create CSV or JSON file of users spotify library for record keeping or to see changes over time.
 
 This script requires setting up authorization code flow to obtain an refresh token for API access.
 
